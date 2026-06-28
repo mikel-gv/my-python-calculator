@@ -19,11 +19,11 @@ A robust and simple console-based calculator designed to handle basic and advanc
 
 ## How to Run
 1. Ensure [Python](https://www.python.org/) is installed on your system.
-2. Download the `calculadora.py` file.
+2. Download the `calculator.py` file.
 3. Open your terminal or command prompt.
 4. Run the following command:
    ```bash
-   python calculadora.py
+   python calculator.py
 
 ## About
 This project was developed as part of my initial Python learning path, focusing on control flow (while), exception handling, and functional organization.
