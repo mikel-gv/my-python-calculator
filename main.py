@@ -8,28 +8,21 @@ def calc(num1, oper, num2):
         return num1 * num2
     elif oper == '/':
         if num2 == 0:
-            return "Can't divide by zero"
-        elif num1 == 0:
-            return 'Your result is 0'
-        else:
-            return num1 / num2
+            return 'Error: Cannot divide by zero.'
+        return num1 / num2
     elif oper == '**':
-        if num1 == 0 and num2 == 0:
-            return 'Your result is undefined'
-        else:
-            return num1 ** num2
+        return num1 ** num2
     elif oper == '%':
         if num2 == 0:
-            return "Can't modulo by zero"
-        else:
-            return num1 % num2
+            return 'Error: Cannot perform modulo by zero.'
+        return num1 % num2
     elif oper == '//':
         if num2 == 0:
-            return "Can't floor divide by zero"
+            return 'Error: Cannot perform floor division by zero.'
         else: 
             return num1 // num2
     else: 
-        return 'Choose a valid operator'
+        return 'Error: Invalid operator. Please choose from the list.'
 
 # Loop the function.
 first_enter = True 
@@ -46,7 +39,7 @@ while True:
         print('Quitting...')
         break
     elif num1_input.strip() == '':
-        print('You have to write something.')
+        print('Input cannot be empty.')
         continue
     # Handle user input errors for non-numeric values.
     try: 
@@ -59,9 +52,9 @@ while True:
 
     # Show the result to the user.
         if isinstance(result, (int, float)):
-            print(f'Your result is = {result:g}')
+            print(f'Result: {result:g}')
         else:
             print(result)
     except ValueError:
-        print('You have to write a number.')
+        print('Invalid input: please enter a valid number.')
         continue
